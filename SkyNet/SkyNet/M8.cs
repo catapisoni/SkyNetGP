@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SkyNet
 {
-    public class M8:MechanicalOperator
+    public class M8 : MechanicalOperator
     {
         private float loadCapacity;
         private float appendageType;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SkyNet
 {
-    public class UAV:MechanicalOperator
+    public class UAV : MechanicalOperator
     {
         private float flightHeight;
         private int bladeAmount;

@@ -18,7 +18,7 @@ namespace SkyNet
         //agregue
         private double currentLoadBattery;
         private float currentLoadKg;
-        
+
 
         public string Id { get; set; }
         public Battery Battery { get; set; }
@@ -33,10 +33,10 @@ namespace SkyNet
         public MechanicalOperator()
         {
             this.id = string.Empty;
-            this.battery=new Battery();
-            this.Status= string.Empty;
-            this.maxLoad=0;
-            this.optimalSpeed =0;
+            this.battery = new Battery();
+            this.Status = string.Empty;
+            this.maxLoad = 0;
+            this.optimalSpeed = 0;
             this.currentLocation = string.Empty;
             this.currentLoadBattery = 0;
             this.currentLoadKg = 0;
@@ -44,13 +44,13 @@ namespace SkyNet
 
         public void MoveTo(string destination, double distance)
         {
-            if(destination == this.currentLocation)
+            if (destination == this.currentLocation)
             {
                 Console.WriteLine("No puede enviar el robot al mismo destino donde ya se encuentra");
             }
-            if(destination != this.currentLocation)
+            if (destination != this.currentLocation)
             {
-                
+
             }
         }
         //metodo para reducir bateria 
@@ -62,14 +62,14 @@ namespace SkyNet
             currentLoadBattery -= (distance / distancePorcentage) * decreasePorcentage;
 
             Console.WriteLine($"Nivel actual de bateria {currentLoadBattery}");
-            
+
         }
 
         public void TransferBattery(MechanicalOperator destination, int amount)
         {
-             if (amount < 0)
+            if (amount < 0)
             {
-                throw new InvalidOperationException($"La batería actual es de {this.currentLoadBattery}, no se puede hacer la transferencia" );
+                throw new InvalidOperationException($"La batería actual es de {this.currentLoadBattery}, no se puede hacer la transferencia");
             }
 
             // Compara las ubicaciones de los robots
@@ -107,7 +107,7 @@ namespace SkyNet
             {
                 Console.WriteLine($"La capacidad maxima del robot {this.id} es de {this.maxLoad}, no es posible asignarle el peso que desea");
             }
-            else if((amount + currentLoadKg) < this.maxLoad && this.CurrentLocation == destination.currentLocation)
+            else if ((amount + currentLoadKg) < this.maxLoad && this.CurrentLocation == destination.currentLocation)
             {
                 Console.WriteLine("Es posible realizar transferencia de carga");
                 Console.WriteLine($"La capacidad maxima de carga de peso del robot {this.Id} es {this.maxLoad} " +
@@ -139,7 +139,7 @@ namespace SkyNet
 
         }
 
-        public void LoadLoad (float carga)
+        public void LoadLoad(float carga)
         {
 
         }

@@ -30,16 +30,16 @@ namespace SkyNet
 
         }
 
-       /* public MechanicalOperator SelectOperator(string id)
-        {
-            return ;
-        }*/
+        /* public MechanicalOperator SelectOperator(string id)
+         {
+             return ;
+         }*/
 
         public void AddReserveOperator(MechanicalOperator op)
         {
 
         }
-        public void RemoveReserveOperator (MechanicalOperator op)
+        public void RemoveReserveOperator(MechanicalOperator op)
         {
 
         }

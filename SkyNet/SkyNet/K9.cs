@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SkyNet
 {
-    public class K9:MechanicalOperator
+    public class K9 : MechanicalOperator
     {
         private string sensorType;
         private string movility;
@@ -16,7 +16,7 @@ namespace SkyNet
         public K9()
         {
             this.sensorType = string.Empty;
-            this.movility=string.Empty;
+            this.movility = string.Empty;
         }
 
         public void Patrol()
